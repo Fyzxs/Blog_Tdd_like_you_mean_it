@@ -20,7 +20,7 @@ namespace TddLikeYouMeanIt
             actual.Should().Be("1");
         }
 
-        public string Transform(int i)
+        public string Transform(int _)
         {
             return "1";
         }
