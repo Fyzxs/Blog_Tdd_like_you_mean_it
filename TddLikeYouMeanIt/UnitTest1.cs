@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TddLikeYouMeanIt
 {
     [TestClass]
-    public class UnitTest1
+    public class FizzBuzzTests
     {
         [TestMethod]
         public void GivenInt1ShouldReturnString1()
