@@ -11,7 +11,12 @@ namespace TddLikeYouMeanIt
         {
             //Given an integer of 1 should return string of 1
 
+            //ARRANGE
+
+            //ACT
             string actual = FizzBuzz(1);
+
+            //ASSERT
             actual.Should().Be("1");
         }
 
