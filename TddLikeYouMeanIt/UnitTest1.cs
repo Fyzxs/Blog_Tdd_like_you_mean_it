@@ -22,7 +22,7 @@ namespace TddLikeYouMeanIt
 
         private string FizzBuzz(int i)
         {
-            throw new System.NotImplementedException();
+            return "";
         }
     }
 }
