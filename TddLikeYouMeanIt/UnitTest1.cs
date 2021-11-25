@@ -7,7 +7,7 @@ namespace TddLikeYouMeanIt
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GivenInt1ShouldReturnString1()
         {
             //Given an integer of 1 should return string of 1
 
