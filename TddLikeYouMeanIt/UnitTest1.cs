@@ -14,13 +14,13 @@ namespace TddLikeYouMeanIt
             //ARRANGE
 
             //ACT
-            string actual = FizzBuzz(1);
+            string actual = Transform(1);
 
             //ASSERT
             actual.Should().Be("1");
         }
 
-        public string FizzBuzz(int i)
+        public string Transform(int i)
         {
             return "1";
         }
