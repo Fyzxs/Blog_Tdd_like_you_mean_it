@@ -22,7 +22,7 @@ namespace TddLikeYouMeanIt
 
         private string FizzBuzz(int i)
         {
-            return "";
+            return "1";
         }
     }
 }
