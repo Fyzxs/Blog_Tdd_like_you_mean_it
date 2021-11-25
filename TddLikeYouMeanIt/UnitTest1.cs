@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TddLikeYouMeanIt
@@ -10,7 +11,8 @@ namespace TddLikeYouMeanIt
         {
             //Given an integer of 1 should return string of 1
 
-            Assert.AreEqual("1", actual);
+            string actual = FizzBuzz(1);
+            actual.Should().Be("1");
         }
 
     }
