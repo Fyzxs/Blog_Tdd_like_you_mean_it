@@ -12,9 +12,10 @@ namespace TddLikeYouMeanIt
             //Given an integer of 1 should return string of 1
 
             //ARRANGE
+            int valueToTransform = 1;
 
             //ACT
-            string actual = Transform(1);
+            string actual = Transform(valueToTransform);
 
             //ASSERT
             actual.Should().Be("1");
