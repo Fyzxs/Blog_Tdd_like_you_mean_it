@@ -20,5 +20,9 @@ namespace TddLikeYouMeanIt
             actual.Should().Be("1");
         }
 
+        private string FizzBuzz(int i)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
