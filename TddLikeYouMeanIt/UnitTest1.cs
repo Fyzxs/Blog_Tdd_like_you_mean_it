@@ -13,12 +13,13 @@ namespace TddLikeYouMeanIt
 
             //ARRANGE
             int valueToTransform = 1;
+            string transformedValue = "1";
 
             //ACT
             string actual = Transform(valueToTransform);
 
             //ASSERT
-            actual.Should().Be("1");
+            actual.Should().Be(transformedValue);
         }
 
         public string Transform(int _)
