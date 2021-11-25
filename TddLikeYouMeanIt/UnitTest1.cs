@@ -9,8 +9,6 @@ namespace TddLikeYouMeanIt
         [TestMethod]
         public void GivenInt1ShouldReturnString1()
         {
-            //Given an integer of 1 should return string of 1
-
             //ARRANGE
             int valueToTransform = 1;
             string transformedValue = "1";
