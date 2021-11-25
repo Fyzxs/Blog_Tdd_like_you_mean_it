@@ -8,7 +8,9 @@ namespace TddLikeYouMeanIt
         [TestMethod]
         public void TestMethod1()
         {
-            //Given an interger of 1 should return string of 1
+            //Given an integer of 1 should return string of 1
+
+            Assert.AreEqual("1", actual);
         }
 
     }
