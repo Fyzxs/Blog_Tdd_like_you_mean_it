@@ -20,7 +20,7 @@ namespace TddLikeYouMeanIt
             actual.Should().Be("1");
         }
 
-        private string FizzBuzz(int i)
+        public string FizzBuzz(int i)
         {
             return "1";
         }
