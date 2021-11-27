@@ -26,8 +26,8 @@ namespace TddLikeYouMeanIt
             //Given an integer of 2 should return string of 2
 
             //ARRANGE
-            int valueToTransform = 1;
-            string transformedValue = "1";
+            int valueToTransform = 2;
+            string transformedValue = "2";
 
             //ACT
             string actual = Transform(valueToTransform);
