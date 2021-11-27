@@ -53,7 +53,7 @@ namespace TddLikeYouMeanIt
         {
             if (source == 1) return source.ToString();
             if (source == 3) return source.ToString();
-            if (source == 2) return "2";
+            if (source == 2) return source.ToString();
             throw new Exception("We broke something");
         }
     }
