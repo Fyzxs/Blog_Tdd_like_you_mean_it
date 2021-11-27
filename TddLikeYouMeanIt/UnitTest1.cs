@@ -52,7 +52,7 @@ namespace TddLikeYouMeanIt
         public string Transform(int source)
         {
             if (source == 1) return source.ToString();
-            if (source == 1) return "1";
+            ///if (source == 1) return "1";
             if (source == 3) return "3";
             if (source == 2) return "2";
             throw new Exception("We broke something");
