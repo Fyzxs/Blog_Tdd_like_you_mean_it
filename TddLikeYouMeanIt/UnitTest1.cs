@@ -52,9 +52,6 @@ namespace TddLikeYouMeanIt
         public string Transform(int source)
         {
             if (source is 1 or 2 or 3) return source.ToString();
-            //if (source == 1) return source.ToString();
-            //if (source == 3) return source.ToString();
-            //if (source == 2) return source.ToString();
             throw new Exception("We broke something");
         }
     }
