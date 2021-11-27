@@ -23,8 +23,6 @@ namespace TddLikeYouMeanIt
         [TestMethod]
         public void GivenInt2ShouldReturnString2()
         {
-            //Given an integer of 2 should return string of 2
-
             //ARRANGE
             int valueToTransform = 2;
             string transformedValue = "2";
