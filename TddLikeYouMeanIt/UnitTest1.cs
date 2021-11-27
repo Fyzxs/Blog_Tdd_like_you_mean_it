@@ -1,3 +1,4 @@
+using System;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -53,7 +54,7 @@ namespace TddLikeYouMeanIt
             if (source == 1) return "1";
             if (source == 3) return "3";
             if (source == 2) return "2";
-            return "1";
+            throw new Exception("We broke something");
         }
     }
 }
