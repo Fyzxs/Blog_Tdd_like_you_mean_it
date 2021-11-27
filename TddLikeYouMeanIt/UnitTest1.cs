@@ -21,7 +21,7 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
-        public void GivenInt1ShouldReturnString1()
+        public void GivenInt2ShouldReturnString2()
         {
             //Given an integer of 2 should return string of 2
 
