@@ -33,8 +33,7 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(transformedValue);
         }
-
-        //Given an integer of 3 should return string of 3
+        
         [TestMethod]
         public void GivenInt3ShouldReturnString3()
         {
