@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -8,39 +10,19 @@ namespace TddLikeYouMeanIt
     public class FizzBuzzTests
     {
         [TestMethod]
-        public void GivenInt1ShouldReturnString1()
+        public void GivenInputReturnsStringOfInput()
         {
             //ARRANGE
-            int valueToTransform = 1;
-            string transformedValue = "1";
+            Dictionary<int, string> regressionValues = new()
+            {
+                { 1, "1" },
+                { 2, "2" },
+                { 3, "3" }
+            };
 
-            //ACT
-            string actual = Transform(valueToTransform);
+            (int valueToTransform, string transformedValue) = 
+                regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
 
-            //ASSERT
-            actual.Should().Be(transformedValue);
-        }
-
-        [TestMethod]
-        public void GivenInt2ShouldReturnString2()
-        {
-            //ARRANGE
-            int valueToTransform = 2;
-            string transformedValue = "2";
-
-            //ACT
-            string actual = Transform(valueToTransform);
-
-            //ASSERT
-            actual.Should().Be(transformedValue);
-        }
-        
-        [TestMethod]
-        public void GivenInt3ShouldReturnString3()
-        {
-            //ARRANGE
-            int valueToTransform = 3;
-            string transformedValue = "3";
 
             //ACT
             string actual = Transform(valueToTransform);
