@@ -38,6 +38,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int _)
         {
+            if (_ == 2) return "2";
             return "1";
         }
     }
