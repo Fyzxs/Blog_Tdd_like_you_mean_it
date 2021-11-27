@@ -33,9 +33,23 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(transformedValue);
         }
-        
+
         //Given an integer of 3 should return string of 3
-        
+
+        [TestMethod]
+        public void GivenInt2ShouldReturnString2()
+        {
+            //ARRANGE
+            int valueToTransform = 2;
+            string transformedValue = "2";
+
+            //ACT
+            string actual = Transform(valueToTransform);
+
+            //ASSERT
+            actual.Should().Be(transformedValue);
+        }
+
         public string Transform(int source)
         {
             if (source == 2) return "2";
