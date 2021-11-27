@@ -40,8 +40,8 @@ namespace TddLikeYouMeanIt
         public void GivenInt2ShouldReturnString2()
         {
             //ARRANGE
-            int valueToTransform = 2;
-            string transformedValue = "2";
+            int valueToTransform = 3;
+            string transformedValue = "3";
 
             //ACT
             string actual = Transform(valueToTransform);
