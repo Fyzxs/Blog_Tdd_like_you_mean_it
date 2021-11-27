@@ -35,9 +35,8 @@ namespace TddLikeYouMeanIt
         }
 
         //Given an integer of 3 should return string of 3
-
         [TestMethod]
-        public void GivenInt2ShouldReturnString2()
+        public void GivenInt3ShouldReturnString3()
         {
             //ARRANGE
             int valueToTransform = 3;
@@ -52,6 +51,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
+            if (source == 3) return "3";
             if (source == 2) return "2";
             return "1";
         }
