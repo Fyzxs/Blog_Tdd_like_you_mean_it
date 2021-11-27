@@ -36,9 +36,9 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(transformedValue);
         }
 
-        public string Transform(int _)
+        public string Transform(int source)
         {
-            if (_ == 2) return "2";
+            if (source == 2) return "2";
             return "1";
         }
     }
