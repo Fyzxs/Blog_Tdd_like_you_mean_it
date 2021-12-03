@@ -20,7 +20,7 @@ namespace TddLikeYouMeanIt
                 { 4, "4" }
             };
 
-            (int valueToTransform, string transformedValue) = 
+            (int valueToTransform, string expected) = 
                 regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
 
 
@@ -28,7 +28,7 @@ namespace TddLikeYouMeanIt
             string actual = Transform(valueToTransform);
 
             //ASSERT
-            actual.Should().Be(transformedValue);
+            actual.Should().Be(expected);
         }
         
         [TestMethod]
