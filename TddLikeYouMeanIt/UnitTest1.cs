@@ -33,7 +33,7 @@ namespace TddLikeYouMeanIt
 
         //Pass in 3, get back "Fizz"
         [TestMethod]
-        public void In3OutFizz()
+        public void GivenInput3ReturnsFizz()
         {
             //ARRANGE
 
