@@ -35,12 +35,14 @@ namespace TddLikeYouMeanIt
         public void GivenInput3ReturnsFizz()
         {
             //ARRANGE
+            string transformedValue = "Fizz";
+            int valueToTransform = 3;
 
             //ACT
-            string actual = Transform(3);
+            string actual = Transform(valueToTransform);
 
             //ASSERT
-            actual.Should().Be("Fizz");
+            actual.Should().Be(transformedValue);
         }
 
         public string Transform(int source)
