@@ -20,12 +20,12 @@ namespace TddLikeYouMeanIt
                 { 4, "4" }
             };
 
-            (int valueToTransform, string expected) = 
+            (int sourceInput, string expected) = 
                 regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
 
 
             //ACT
-            string actual = Transform(valueToTransform);
+            string actual = Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
