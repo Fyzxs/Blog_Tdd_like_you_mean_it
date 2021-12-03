@@ -36,10 +36,10 @@ namespace TddLikeYouMeanIt
         {
             //ARRANGE
             string expected = "Fizz";
-            int valueToTransform = 3;
+            int sourceInput = 3;
 
             //ACT
-            string actual = Transform(valueToTransform);
+            string actual = Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
