@@ -32,6 +32,16 @@ namespace TddLikeYouMeanIt
         }
 
         //Pass in 3, get back "Fizz"
+        [TestMethod]
+        public void In3OutFizz()
+        {
+            //ARRANGE
+
+            //ACT
+
+            //ASSERT
+            actual.should().Be("Fizz");
+        }
 
         public string Transform(int source)
         {
