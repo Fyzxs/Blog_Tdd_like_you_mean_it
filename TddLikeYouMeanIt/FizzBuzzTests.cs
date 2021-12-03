@@ -23,7 +23,6 @@ namespace TddLikeYouMeanIt
             (int sourceInput, string expected) = 
                 regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
 
-
             //ACT
             string actual = Transform(sourceInput);
 
