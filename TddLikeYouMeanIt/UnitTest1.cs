@@ -38,10 +38,10 @@ namespace TddLikeYouMeanIt
             //ARRANGE
 
             //ACT
-            string actual;
+            string actual = Transform(3);
 
             //ASSERT
-            actual.should().Be("Fizz");
+            actual.Should().Be("Fizz");
         }
 
         public string Transform(int source)
