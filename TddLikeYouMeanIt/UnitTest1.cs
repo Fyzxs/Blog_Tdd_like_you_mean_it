@@ -38,6 +38,7 @@ namespace TddLikeYouMeanIt
             //ARRANGE
 
             //ACT
+            string actual;
 
             //ASSERT
             actual.should().Be("Fizz");
