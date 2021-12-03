@@ -30,8 +30,7 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(transformedValue);
         }
-
-        //Pass in 3, get back "Fizz"
+        
         [TestMethod]
         public void GivenInput3ReturnsFizz()
         {
