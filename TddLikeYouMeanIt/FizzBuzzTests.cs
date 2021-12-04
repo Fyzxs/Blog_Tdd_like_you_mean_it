@@ -44,8 +44,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        //Input 6 Gives Fizz
-
         [TestMethod]
         public void GivenInput6ReturnsFizz()
         {
