@@ -72,8 +72,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        //Given 12 returns Fizz
-
         public string Transform(int source)
         {
             if (0 == source % 3) return "Fizz";
