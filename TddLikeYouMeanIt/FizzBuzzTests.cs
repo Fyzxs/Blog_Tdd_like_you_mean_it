@@ -59,11 +59,11 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
-        public void GivenInput9ReturnsFizz()
+        public void GivenInput12ReturnsFizz()
         {
             //ARRANGE
             string expected = "Fizz";
-            int sourceInput = 3 * 3;
+            int sourceInput = 4 * 3;
 
             //ACT
             string actual = Transform(sourceInput);
@@ -76,7 +76,6 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
-            if (source == 3 * 3) return "Fizz";
             if (source == 2 * 3) return "Fizz";
             if (source == 1 * 3) return "Fizz";
             return source.ToString();
