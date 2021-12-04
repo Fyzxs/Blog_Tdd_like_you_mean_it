@@ -44,6 +44,8 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
+        //Input 6 Gives Fizz
+
         public string Transform(int source)
         {
             if (source == 3) return "Fizz";
