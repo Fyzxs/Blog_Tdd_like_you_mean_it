@@ -57,7 +57,21 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(expected);
         }
-        
+
+        [TestMethod]
+        public void GivenInput6ReturnsFizz()
+        {
+            //ARRANGE
+            string expected = "Fizz";
+            int sourceInput = 2 * 3;
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
         //Given 9 returns Fizz
 
         public string Transform(int source)
