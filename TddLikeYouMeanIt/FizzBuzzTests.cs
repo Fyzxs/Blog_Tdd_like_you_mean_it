@@ -47,7 +47,7 @@ namespace TddLikeYouMeanIt
         //Input 6 Gives Fizz
 
         [TestMethod]
-        public void GivenInput3ReturnsFizz()
+        public void GivenInput6ReturnsFizz()
         {
             //ARRANGE
             string expected = "Fizz";
