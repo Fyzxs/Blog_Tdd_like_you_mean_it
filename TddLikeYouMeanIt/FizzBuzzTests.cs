@@ -51,7 +51,7 @@ namespace TddLikeYouMeanIt
         {
             //ARRANGE
             string expected = "Fizz";
-            int sourceInput = 2*3;
+            int sourceInput = 2 * 3;
 
             //ACT
             string actual = Transform(sourceInput);
@@ -62,7 +62,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
-            if (source == 6) return "Fizz";
+            if (source == 2 * 3) return "Fizz";
             if (source == 3) return "Fizz";
             return source.ToString();
         }
