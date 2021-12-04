@@ -29,7 +29,28 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(expected);
         }
-        
+
+        [TestMethod]
+        public void GivenInputMultipleOf3ReturnsFizz()
+        {
+            //ARRANGE
+            Dictionary<int, string> regressionValues = new()
+            {
+                { 1 * 3, "Fizz" },
+                { 2 * 3, "Fizz" },
+                { 4 * 3, "Fizz" }
+            };
+
+            (int sourceInput, string expected) =
+                regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
         [TestMethod]
         public void GivenInput3ReturnsFizz()
         {
