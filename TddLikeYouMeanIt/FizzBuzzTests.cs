@@ -35,7 +35,7 @@ namespace TddLikeYouMeanIt
         {
             //ARRANGE
             string expected = "Fizz";
-            int sourceInput = 3;
+            int sourceInput = 1 * 3;
 
             //ACT
             string actual = Transform(sourceInput);
