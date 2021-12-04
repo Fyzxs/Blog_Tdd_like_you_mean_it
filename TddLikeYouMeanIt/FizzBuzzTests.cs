@@ -46,6 +46,20 @@ namespace TddLikeYouMeanIt
 
         //Input 6 Gives Fizz
 
+        [TestMethod]
+        public void GivenInput3ReturnsFizz()
+        {
+            //ARRANGE
+            string expected = "Fizz";
+            int sourceInput = 3;
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
         public string Transform(int source)
         {
             if (source == 3) return "Fizz";
