@@ -76,6 +76,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
+            if (0 == source % 3) return "Fizz";
             if (source == 4 * 3) return "Fizz";
             if (source == 2 * 3) return "Fizz";
             if (source == 1 * 3) return "Fizz";
