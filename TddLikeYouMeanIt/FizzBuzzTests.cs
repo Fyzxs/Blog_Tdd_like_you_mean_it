@@ -72,7 +72,7 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        //Given 9 returns Fizz
+        //Given 12 returns Fizz
 
         public string Transform(int source)
         {
