@@ -51,9 +51,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-
-        //Given input of 5 get 'Buzz' returned
-
         [TestMethod]
         public void Given5ReturnsBuzz()
         {
