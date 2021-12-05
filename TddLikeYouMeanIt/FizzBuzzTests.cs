@@ -51,16 +51,21 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
+
         //Given input of 5 get 'Buzz' returned
+
         [TestMethod]
         public void Given5ReturnsBuzz()
         {
             //ARRANGE
+            int sourceInput = 5;
+            string expected = "Buzz";
 
             //ACT
+            string actual = Transform(sourceInput);
 
             //ASSERT
-            actual.Should().Be("Buzz");
+            actual.Should().Be(expected);
         }
 
         public string Transform(int source)
