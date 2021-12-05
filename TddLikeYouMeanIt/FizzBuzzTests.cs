@@ -65,8 +65,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        //Given 10, should get Buzz
-
         [TestMethod]
         public void Given10ReturnsBuzz()
         {
