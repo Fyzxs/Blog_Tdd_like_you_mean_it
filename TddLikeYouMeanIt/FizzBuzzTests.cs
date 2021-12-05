@@ -98,9 +98,9 @@ namespace TddLikeYouMeanIt
         public string Transform(int source)
         {
             if (0 == source % 5) return "Buzz";
-            if (source == 4 * 5) return "Buzz";
-            if (source == 2 * 5) return "Buzz";
-            if (source == 1 * 5) return "Buzz";
+            //if (source == 4 * 5) return "Buzz";
+            //if (source == 2 * 5) return "Buzz";
+            //if (source == 1 * 5) return "Buzz";
             if (0 == source % 3) return "Fizz";
             return source.ToString();
         }
