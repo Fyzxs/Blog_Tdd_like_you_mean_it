@@ -55,7 +55,7 @@ namespace TddLikeYouMeanIt
         public void Given5ReturnsBuzz()
         {
             //ARRANGE
-            int sourceInput = 5;
+            int sourceInput = 1 * 5;
             string expected = "Buzz";
 
             //ACT
@@ -69,7 +69,7 @@ namespace TddLikeYouMeanIt
         public void Given10ReturnsBuzz()
         {
             //ARRANGE
-            int sourceInput = 10;
+            int sourceInput = 2 * 5;
             string expected = "Buzz";
 
             //ACT
@@ -85,7 +85,7 @@ namespace TddLikeYouMeanIt
         public void Given20ReturnsBuzz()
         {
             //ARRANGE
-            int sourceInput = 20;
+            int sourceInput = 4 * 5;
             string expected = "Buzz";
 
             //ACT
@@ -97,9 +97,9 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
-            if (source == 20) return "Buzz";
-            if (source == 10) return "Buzz";
-            if (source == 5) return "Buzz";
+            if (source == 4 * 5) return "Buzz";
+            if (source == 2 * 5) return "Buzz";
+            if (source == 1 * 5) return "Buzz";
             if (0 == source % 3) return "Fizz";
             return source.ToString();
         }
