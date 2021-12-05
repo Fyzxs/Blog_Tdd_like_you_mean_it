@@ -31,7 +31,7 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
-        public void GivenInputMultipleOf3ReturnsFizz()
+        public void GivenMultipleOf3ReturnsFizz()
         {
             //ARRANGE
             Dictionary<int, string> regressionValues = new()
