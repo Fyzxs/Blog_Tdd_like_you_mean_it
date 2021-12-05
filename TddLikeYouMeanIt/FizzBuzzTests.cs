@@ -60,7 +60,7 @@ namespace TddLikeYouMeanIt
             //ACT
 
             //ASSERT
-
+            actual.Should().Be("Buzz");
         }
 
         public string Transform(int source)
