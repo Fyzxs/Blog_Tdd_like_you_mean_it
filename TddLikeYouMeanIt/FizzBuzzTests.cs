@@ -57,15 +57,11 @@ namespace TddLikeYouMeanIt
             //ARRANGE
             int multiplicand = 5;
             string expected = "Buzz";
-            List<int> regressionValues = new()
-            {
-                1 * multiplicand,
-                2 * multiplicand,
-                4 * multiplicand
-            };
+            List<int> regressionValues = new() { 1, 2, 4 };
 
             int sourceInput =
-                regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
+                regressionValues.ElementAt(new Random().Next(0, regressionValues.Count))
+                * multiplicand;
 
             //ACT
             string actual = Transform(sourceInput);
