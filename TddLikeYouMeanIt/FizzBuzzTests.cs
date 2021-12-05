@@ -36,8 +36,8 @@ namespace TddLikeYouMeanIt
         public void GivenMultipleOf3ReturnsFizz()
         {
             //ARRANGE
-            int multiplicand = 3;
-            string expected = "Fizz";
+            const int multiplicand = 3;
+            const string expected = "Fizz";
             List<int> multiplierList = new() { 1, 2, 4 };
 
             int randomIndex = Rand.Next(multiplierList.Count);
@@ -55,8 +55,8 @@ namespace TddLikeYouMeanIt
         public void GivenMultipleOf5ReturnsFizz()
         {
             //ARRANGE
-            int multiplicand = 5;
-            string expected = "Buzz";
+            const int multiplicand = 5;
+            const string expected = "Buzz";
             List<int> multiplierList = new() { 1, 2, 4 };
 
             int randomIndex = Rand.Next(multiplierList.Count);
