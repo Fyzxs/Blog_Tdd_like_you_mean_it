@@ -52,6 +52,16 @@ namespace TddLikeYouMeanIt
         }
 
         //Given input of 5 get 'Buzz' returned
+        [TestMethod]
+        public void Given5ReturnsBuzz()
+        {
+            //ARRANGE
+
+            //ACT
+
+            //ASSERT
+
+        }
 
         public string Transform(int source)
         {
