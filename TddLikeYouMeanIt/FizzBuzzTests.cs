@@ -81,6 +81,20 @@ namespace TddLikeYouMeanIt
 
         //Given 20 should return Buzz
 
+        [TestMethod]
+        public void Given10ReturnsBuzz()
+        {
+            //ARRANGE
+            int sourceInput = 10;
+            string expected = "Buzz";
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
         public string Transform(int source)
         {
             if (source == 10) return "Buzz";
