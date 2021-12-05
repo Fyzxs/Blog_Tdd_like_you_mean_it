@@ -55,11 +55,12 @@ namespace TddLikeYouMeanIt
         public void GivenMultipleOf5ReturnsFizz()
         {
             //ARRANGE
+            int multiplicand = 5;
             Dictionary<int, string> regressionValues = new()
             {
-                { 1 * 5, "Buzz" },
-                { 2 * 5, "Buzz" },
-                { 4 * 5, "Buzz" }
+                { 1 * multiplicand, "Buzz" },
+                { 2 * multiplicand, "Buzz" },
+                { 4 * multiplicand, "Buzz" }
             };
 
             (int sourceInput, string expected) =
