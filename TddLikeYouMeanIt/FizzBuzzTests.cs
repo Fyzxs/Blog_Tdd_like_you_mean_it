@@ -52,6 +52,27 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
+        public void GivenMultipleOf5ReturnsFizz()
+        {
+            //ARRANGE
+            Dictionary<int, string> regressionValues = new()
+            {
+                { 1 * 5, "Buzz" },
+                { 2 * 5, "Buzz" },
+                { 4 * 5, "Buzz" }
+            };
+
+            (int sourceInput, string expected) =
+                regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
+        [TestMethod]
         public void Given5ReturnsBuzz()
         {
             //ARRANGE
