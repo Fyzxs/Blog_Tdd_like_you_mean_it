@@ -36,15 +36,13 @@ namespace TddLikeYouMeanIt
         public void GivenMultipleOf3ReturnsFizz()
         {
             //ARRANGE
-            Dictionary<int, string> regressionValues = new()
-            {
-                { 1 * 3, "Fizz" },
-                { 2 * 3, "Fizz" },
-                { 4 * 3, "Fizz" }
-            };
+            int multiplicand = 3;
+            string expected = "Fizz";
+            List<int> multiplierList = new() { 1, 2, 4 };
 
-            (int sourceInput, string expected) =
-                regressionValues.ElementAt(rand.Next(0, regressionValues.Count));
+            int randomIndex = rand.Next(multiplierList.Count);
+            int multiplier = multiplierList.ElementAt(randomIndex);
+            int sourceInput = multiplier * multiplicand;
 
             //ACT
             string actual = Transform(sourceInput);
