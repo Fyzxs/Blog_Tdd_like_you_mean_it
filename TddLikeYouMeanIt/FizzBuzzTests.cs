@@ -57,14 +57,14 @@ namespace TddLikeYouMeanIt
             //ARRANGE
             int multiplicand = 5;
             string expected = "Buzz";
-            Dictionary<int, string> regressionValues = new()
+            List<int> regressionValues = new()
             {
-                { 1 * multiplicand, expected },
-                { 2 * multiplicand, expected },
-                { 4 * multiplicand, expected }
+                1 * multiplicand,
+                2 * multiplicand,
+                4 * multiplicand
             };
 
-            (int sourceInput, string _) =
+            int sourceInput =
                 regressionValues.ElementAt(new Random().Next(0, regressionValues.Count));
 
             //ACT
