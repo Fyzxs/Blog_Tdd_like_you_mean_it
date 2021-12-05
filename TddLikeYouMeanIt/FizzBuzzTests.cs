@@ -62,8 +62,8 @@ namespace TddLikeYouMeanIt
             List<int> regressionValues = new() { 1, 2, 4 };
 
             int randomIndex = rand.Next(0, regressionValues.Count);
-            int elementAt = regressionValues.ElementAt(randomIndex);
-            int sourceInput = elementAt * multiplicand;
+            int multiplier = regressionValues.ElementAt(randomIndex);
+            int sourceInput = multiplier * multiplicand;
 
             //ACT
             string actual = Transform(sourceInput);
