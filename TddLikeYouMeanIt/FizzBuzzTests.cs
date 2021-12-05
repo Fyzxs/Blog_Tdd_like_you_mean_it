@@ -83,6 +83,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
+            if (source == 10) return "Buzz";
             if (source == 5) return "Buzz";
             if (0 == source % 3) return "Fizz";
             return source.ToString();
