@@ -56,11 +56,12 @@ namespace TddLikeYouMeanIt
         {
             //ARRANGE
             int multiplicand = 5;
+            string returnValue = "Buzz";
             Dictionary<int, string> regressionValues = new()
             {
-                { 1 * multiplicand, "Buzz" },
-                { 2 * multiplicand, "Buzz" },
-                { 4 * multiplicand, "Buzz" }
+                { 1 * multiplicand, returnValue },
+                { 2 * multiplicand, returnValue },
+                { 4 * multiplicand, returnValue }
             };
 
             (int sourceInput, string expected) =
