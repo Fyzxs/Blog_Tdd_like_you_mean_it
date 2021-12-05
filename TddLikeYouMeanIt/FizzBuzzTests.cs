@@ -68,7 +68,7 @@ namespace TddLikeYouMeanIt
         //Given 10, should get Buzz
 
         [TestMethod]
-        public void Given5ReturnsBuzz()
+        public void Given10ReturnsBuzz()
         {
             //ARRANGE
             int sourceInput = 10;
