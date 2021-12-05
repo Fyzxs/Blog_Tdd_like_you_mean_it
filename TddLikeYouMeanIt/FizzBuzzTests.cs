@@ -71,7 +71,7 @@ namespace TddLikeYouMeanIt
         public void Given5ReturnsBuzz()
         {
             //ARRANGE
-            int sourceInput = 5;
+            int sourceInput = 10;
             string expected = "Buzz";
 
             //ACT
