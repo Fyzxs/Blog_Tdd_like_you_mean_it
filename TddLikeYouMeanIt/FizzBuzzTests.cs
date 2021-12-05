@@ -61,7 +61,7 @@ namespace TddLikeYouMeanIt
             string expected = "Buzz";
             List<int> multiplierList = new() { 1, 2, 4 };
 
-            int randomIndex = rand.Next(0, multiplierList.Count);
+            int randomIndex = rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             int sourceInput = multiplier * multiplicand;
 
