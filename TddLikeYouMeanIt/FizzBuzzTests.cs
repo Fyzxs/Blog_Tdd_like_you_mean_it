@@ -9,7 +9,7 @@ namespace TddLikeYouMeanIt
     [TestClass]
     public class FizzBuzzTests
     {
-        private static readonly Random Random = new();
+        private static readonly Random rand = new();
 
         [TestMethod]
         public void GivenInputReturnsStringOfInput()
@@ -23,7 +23,7 @@ namespace TddLikeYouMeanIt
             };
 
             (int sourceInput, string expected) =
-                regressionValues.ElementAt(Random.Next(0, regressionValues.Count));
+                regressionValues.ElementAt(rand.Next(0, regressionValues.Count));
 
             //ACT
             string actual = Transform(sourceInput);
@@ -44,7 +44,7 @@ namespace TddLikeYouMeanIt
             };
 
             (int sourceInput, string expected) =
-                regressionValues.ElementAt(Random.Next(0, regressionValues.Count));
+                regressionValues.ElementAt(rand.Next(0, regressionValues.Count));
 
             //ACT
             string actual = Transform(sourceInput);
@@ -61,9 +61,8 @@ namespace TddLikeYouMeanIt
             string expected = "Buzz";
             List<int> regressionValues = new() { 1, 2, 4 };
 
-            int sourceInput =
-                regressionValues.ElementAt(Random.Next(0, regressionValues.Count))
-                * multiplicand;
+            int randomIndex = rand.Next(0, regressionValues.Count);
+            int sourceInput = regressionValues.ElementAt(randomIndex) * multiplicand;
 
             //ACT
             string actual = Transform(sourceInput);
