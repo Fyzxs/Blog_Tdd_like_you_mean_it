@@ -90,7 +90,7 @@ namespace TddLikeYouMeanIt
         public void Given15ReturnsFizzBuzz()
         {
             //ARRANGE
-            const int sourceInput = 15;
+            const int sourceInput = 30;
             const string expected = "FizzBuzz";
 
             //ACT
