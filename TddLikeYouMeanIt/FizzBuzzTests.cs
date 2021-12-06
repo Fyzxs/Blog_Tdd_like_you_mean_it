@@ -89,48 +89,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        [TestMethod]
-        public void Given15ReturnsFizzBuzz()
-        {
-            //ARRANGE
-            const int sourceInput = 1 * (3 * 5);
-            const string expected = "FizzBuzz";
-
-            //ACT
-            string actual = Transform(sourceInput);
-
-            //ASSERT
-            actual.Should().Be(expected);
-        }
-
-        [TestMethod]
-        public void Given30ReturnsFizzBuzz()
-        {
-            //ARRANGE
-            const int sourceInput = 2 * (3 * 5);
-            const string expected = "FizzBuzz";
-
-            //ACT
-            string actual = Transform(sourceInput);
-
-            //ASSERT
-            actual.Should().Be(expected);
-        }
-
-        [TestMethod]
-        public void Given45ReturnsFizzBuzz()
-        {
-            //ARRANGE
-            const int sourceInput = 3 * (3 * 5);
-            const string expected = "FizzBuzz";
-
-            //ACT
-            string actual = Transform(sourceInput);
-
-            //ASSERT
-            actual.Should().Be(expected);
-        }
-
         public string Transform(int source)
         {
             if (0 == source % (3 * 5)) return "FizzBuzz";
