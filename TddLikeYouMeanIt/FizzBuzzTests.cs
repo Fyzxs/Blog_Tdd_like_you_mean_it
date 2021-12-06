@@ -100,6 +100,20 @@ namespace TddLikeYouMeanIt
 
         //Given 45 should return FizzBuzz
 
+        [TestMethod]
+        public void Given30ReturnsFizzBuzz()
+        {
+            //ARRANGE
+            const int sourceInput = 2 * (3 * 5);
+            const string expected = "FizzBuzz";
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
         public string Transform(int source)
         {
             if (source == 2 * (3 * 5)) return "FizzBuzz";
