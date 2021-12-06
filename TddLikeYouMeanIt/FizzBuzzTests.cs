@@ -87,7 +87,7 @@ namespace TddLikeYouMeanIt
         //30 should return FizzBuzz
 
         [TestMethod]
-        public void Given15ReturnsFizzBuzz()
+        public void Given305ReturnsFizzBuzz()
         {
             //ARRANGE
             const int sourceInput = 30;
