@@ -74,7 +74,7 @@ namespace TddLikeYouMeanIt
         public void Given15ReturnsFizzBuzz()
         {
             //ARRANGE
-            const int sourceInput = 15;
+            const int sourceInput = 1 * (3 * 5);
             const string expected = "FizzBuzz";
 
             //ACT
@@ -88,7 +88,7 @@ namespace TddLikeYouMeanIt
         public void Given305ReturnsFizzBuzz()
         {
             //ARRANGE
-            const int sourceInput = 30;
+            const int sourceInput = 2 * (3 * 5);
             const string expected = "FizzBuzz";
 
             //ACT
