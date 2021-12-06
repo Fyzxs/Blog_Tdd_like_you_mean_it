@@ -71,6 +71,16 @@ namespace TddLikeYouMeanIt
         }
 
         //Input of 15 returns FizzBuzz
+        [TestMethod]
+        public void Given15ReturnsFizzBuzz()
+        {
+            //ARRANGE
+
+            //ACT
+
+            //ASSERT
+            actual.Should().be("FizzBuzz");
+        }
 
         public string Transform(int source)
         {
