@@ -98,8 +98,6 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        //Given 45 should return FizzBuzz
-
         [TestMethod]
         public void Given45ReturnsFizzBuzz()
         {
