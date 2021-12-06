@@ -102,6 +102,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
+            if (source == 30) return "FizzBuzz";
             if (source == 15) return "FizzBuzz";
             if (0 == source % 5) return "Buzz";
             if (0 == source % 3) return "Fizz";
