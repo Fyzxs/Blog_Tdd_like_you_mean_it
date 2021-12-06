@@ -69,8 +69,7 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(expected);
         }
-
-        //Input of 15 returns FizzBuzz
+        
         [TestMethod]
         public void Given15ReturnsFizzBuzz()
         {
