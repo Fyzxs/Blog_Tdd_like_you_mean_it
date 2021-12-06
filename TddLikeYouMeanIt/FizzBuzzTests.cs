@@ -69,7 +69,7 @@ namespace TddLikeYouMeanIt
             //ASSERT
             actual.Should().Be(expected);
         }
-        
+
         [TestMethod]
         public void Given15ReturnsFizzBuzz()
         {
@@ -85,6 +85,20 @@ namespace TddLikeYouMeanIt
         }
 
         //30 should return FizzBuzz
+
+        [TestMethod]
+        public void Given15ReturnsFizzBuzz()
+        {
+            //ARRANGE
+            const int sourceInput = 15;
+            const string expected = "FizzBuzz";
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
 
         public string Transform(int source)
         {
