@@ -71,6 +71,25 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
+        public void GivenMultipleOf3And5ReturnsFizzBuzz()
+        {
+            //ARRANGE
+            const int multiplicand = 3 * 5;
+            const string expected = "FizzBuzz";
+            List<int> multiplierList = new() { 1, 2, 3 };
+
+            int randomIndex = Rand.Next(multiplierList.Count);
+            int multiplier = multiplierList.ElementAt(randomIndex);
+            int sourceInput = multiplier * multiplicand;
+
+            //ACT
+            string actual = Transform(sourceInput);
+
+            //ASSERT
+            actual.Should().Be(expected);
+        }
+
+        [TestMethod]
         public void Given15ReturnsFizzBuzz()
         {
             //ARRANGE
