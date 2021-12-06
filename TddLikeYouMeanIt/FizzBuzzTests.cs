@@ -75,11 +75,14 @@ namespace TddLikeYouMeanIt
         public void Given15ReturnsFizzBuzz()
         {
             //ARRANGE
+            int sourceInput = 15;
+            string expected = "FizzBuzz";
 
             //ACT
+            string actual = Transform(sourceInput);
 
             //ASSERT
-            actual.Should().be("FizzBuzz");
+            actual.Should().Be(expected);
         }
 
         public string Transform(int source)
