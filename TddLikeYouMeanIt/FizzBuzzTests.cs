@@ -52,7 +52,7 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
-        public void GivenMultipleOf5ReturnsFizz()
+        public void GivenMultipleOf5ReturnsBuzz()
         {
             //ARRANGE
             const int multiplicand = 5;
