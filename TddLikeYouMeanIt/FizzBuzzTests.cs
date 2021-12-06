@@ -85,7 +85,7 @@ namespace TddLikeYouMeanIt
         }
 
         [TestMethod]
-        public void Given305ReturnsFizzBuzz()
+        public void Given30ReturnsFizzBuzz()
         {
             //ARRANGE
             const int sourceInput = 2 * (3 * 5);
