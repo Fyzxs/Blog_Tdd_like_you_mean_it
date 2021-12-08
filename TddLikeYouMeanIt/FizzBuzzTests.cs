@@ -93,12 +93,10 @@ namespace TddLikeYouMeanIt
 
         public Answer Transform(TurnCount source)
         {
-            TurnCount turnCount = new IntTurnCount(source);
-            
             return new MultipleOfThreeAndFive_RuleEvalAction(
                 new MultipleOfFive_RuleEvalAction(
                     new MultipleOfThree_RuleEvalAction(
-                        new Default_RuleEvalAction()))).Act(turnCount);
+                        new Default_RuleEvalAction()))).Act(source);
         }
     }
 }
