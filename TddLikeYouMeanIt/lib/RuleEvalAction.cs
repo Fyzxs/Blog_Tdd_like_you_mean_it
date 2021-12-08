@@ -5,7 +5,7 @@ namespace TddLikeYouMeanIt.lib
         public Answer Act(TurnCount turnCount);
     }
 
-    public sealed class Default_RuleEvalAction : IRuleEvalAction
+    public sealed class AsString_RuleEvalAction : IRuleEvalAction
     {
         public Answer Act(TurnCount turnCount)
         {

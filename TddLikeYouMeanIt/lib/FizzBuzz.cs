@@ -13,7 +13,7 @@ namespace TddLikeYouMeanIt.lib
             new MultipleOfThreeAndFive_RuleEvalAction(
                 new MultipleOfFive_RuleEvalAction(
                     new MultipleOfThree_RuleEvalAction(
-                        new Default_RuleEvalAction())))
+                        new AsString_RuleEvalAction())))
         )
         { }
 
