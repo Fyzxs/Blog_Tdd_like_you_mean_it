@@ -93,9 +93,10 @@ namespace TddLikeYouMeanIt
         public Answer Transform(int source)
         {
             TurnCount turnCount = new IntTurnCount(source);
+            Rule multipleOfThreeRule = new MultipleOfThreeRule();
             if (turnCount.IsMultipleOf(3 * 5)) return new FizzBuzzAnswer();
             if (turnCount.IsMultipleOf(5)) return new BuzzAnswer();
-            if (turnCount.IsMultipleOf(3)) return new FizzAnswer();
+            if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
             return new InputAsStringAnswer(source);
         }
     }
@@ -111,10 +112,7 @@ namespace TddLikeYouMeanIt
 
         protected MultipleOfRule(int multipleOf) => _multipleOf = multipleOf;
 
-        public override bool Matches(TurnCount turnCount)
-        {
-            return turnCount % _multipleOf == 0;
-        }
+        public override bool Matches(TurnCount turnCount) => turnCount % _multipleOf == 0;
     }
 
     public sealed class MultipleOfThreeRule : MultipleOfRule
