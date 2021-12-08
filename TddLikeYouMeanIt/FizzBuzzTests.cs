@@ -97,10 +97,9 @@ namespace TddLikeYouMeanIt
             IRule multipleOfThreeAndFiveRule = new MultipleOfThreeAndFiveRule();
             if (multipleOfThreeAndFiveRule.Matches(turnCount)) return new FizzBuzzAnswer();
             
-            IRule multipleOfFiveRule = new MultipleOfFiveRule();
-            if (multipleOfFiveRule.Matches(turnCount)) return new BuzzAnswer();
-            
-            return new MultipleOfThree_RuleEvalAction(new Default_RuleEvalAction()).Act(turnCount);
+            return new MultipleOfFive_RuleEvalAction(
+                    new MultipleOfThree_RuleEvalAction(
+                        new Default_RuleEvalAction())).Act(turnCount);
         }
     }
 }
