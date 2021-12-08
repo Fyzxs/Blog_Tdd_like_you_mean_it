@@ -16,4 +16,12 @@ namespace TddLikeYouMeanIt.lib
     {
         protected override string AsSystemType() => "Buzz";
     }
+
+    public sealed class InputAsStringAnswer : Answer
+    {
+        private readonly int _input;
+
+        public InputAsStringAnswer(int input) => _input = input;
+        protected override string AsSystemType() => _input.ToString();
+    }
 }
