@@ -62,7 +62,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            int sourceInput = multiplier * multiplicand;
+            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
 
             //ACT
             string actual = Transform(sourceInput);
