@@ -7,6 +7,17 @@ using TddLikeYouMeanIt.lib;
 
 namespace TddLikeYouMeanIt
 {
+    public class FizzBuzz
+    {
+        public Answer Transform(TurnCount source)
+        {
+            return new MultipleOfThreeAndFive_RuleEvalAction(
+                new MultipleOfFive_RuleEvalAction(
+                    new MultipleOfThree_RuleEvalAction(
+                        new Default_RuleEvalAction()))).Act(source);
+        }
+    }
+
     [TestClass]
     public class FizzBuzzTests
     {
@@ -26,9 +37,10 @@ namespace TddLikeYouMeanIt
             KeyValuePair<int, string> keyValuePair = regressionValues.ElementAt(Rand.Next(0, regressionValues.Count));
             TurnCount sourceInput = new IntTurnCount(keyValuePair.Key);
             string expected = keyValuePair.Value;
+            FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = Transform(sourceInput);
+            string actual = subject.Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -45,9 +57,10 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = Transform(sourceInput);
+            string actual = subject.Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -64,9 +77,10 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = Transform(sourceInput);
+            string actual = subject.Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -83,20 +97,13 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = Transform(sourceInput);
+            string actual = subject.Transform(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
-        }
-
-        public Answer Transform(TurnCount source)
-        {
-            return new MultipleOfThreeAndFive_RuleEvalAction(
-                new MultipleOfFive_RuleEvalAction(
-                    new MultipleOfThree_RuleEvalAction(
-                        new Default_RuleEvalAction()))).Act(source);
         }
     }
 }
