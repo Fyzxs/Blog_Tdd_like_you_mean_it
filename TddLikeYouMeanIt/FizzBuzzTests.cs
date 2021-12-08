@@ -7,7 +7,12 @@ using TddLikeYouMeanIt.lib;
 
 namespace TddLikeYouMeanIt
 {
-    public class FizzBuzz
+    public interface IFizzBuzz
+    {
+        Answer Turn(TurnCount source);
+    }
+
+    public class FizzBuzz : IFizzBuzz
     {
         private readonly IRuleEvalAction _action;
 
@@ -20,10 +25,7 @@ namespace TddLikeYouMeanIt
 
         private FizzBuzz(IRuleEvalAction action) => _action = action;
 
-        public Answer Transform(TurnCount source)
-        {
-            return _action.Act(source);
-        }
+        public Answer Turn(TurnCount source) => _action.Act(source);
     }
 
     [TestClass]
@@ -48,7 +50,7 @@ namespace TddLikeYouMeanIt
             FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Transform(sourceInput);
+            string actual = subject.Turn(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -68,7 +70,7 @@ namespace TddLikeYouMeanIt
             FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Transform(sourceInput);
+            string actual = subject.Turn(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -88,7 +90,7 @@ namespace TddLikeYouMeanIt
             FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Transform(sourceInput);
+            string actual = subject.Turn(sourceInput);
             //ASSERT
             actual.Should().Be(expected);
         }
@@ -107,7 +109,7 @@ namespace TddLikeYouMeanIt
             FizzBuzz subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Transform(sourceInput);
+            string actual = subject.Turn(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
