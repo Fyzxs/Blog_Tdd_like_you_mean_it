@@ -1,6 +1,6 @@
 namespace TddLikeYouMeanIt.lib
 {
-    public abstract class Answer : ToSystemType<string>{ }
+    public abstract class Answer : ToSystemType<string> { }
 
     public sealed class FizzBuzzAnswer : Answer
     {
@@ -22,6 +22,7 @@ namespace TddLikeYouMeanIt.lib
         private readonly TurnCount _input;
 
         public InputAsStringAnswer(TurnCount input) => _input = input;
+
         protected override string AsSystemType() => ((int)_input).ToString();
     }
 }

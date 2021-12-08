@@ -1,7 +1,6 @@
-using System.Data;
 using System.Linq;
 
-namespace TddLikeYouMeanIt
+namespace TddLikeYouMeanIt.lib
 {
     public interface IRule
     {
@@ -40,6 +39,5 @@ namespace TddLikeYouMeanIt
     {
         public MultipleOfThreeAndFiveRule()
             : base(new MultipleOfThreeRule(), new MultipleOfFiveRule()) { }
-
     }
 }

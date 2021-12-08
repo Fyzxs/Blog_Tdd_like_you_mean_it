@@ -1,6 +1,4 @@
-using TddLikeYouMeanIt.lib;
-
-namespace TddLikeYouMeanIt
+namespace TddLikeYouMeanIt.lib
 {
     public interface IRuleEvalAction
     {

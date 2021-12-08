@@ -7,7 +7,6 @@ using TddLikeYouMeanIt.lib;
 
 namespace TddLikeYouMeanIt
 {
-
     [TestClass]
     public class FizzBuzzTests
     {
