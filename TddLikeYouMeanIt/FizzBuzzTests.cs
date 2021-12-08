@@ -91,7 +91,7 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        public Answer Transform(int source)
+        public Answer Transform(TurnCount source)
         {
             TurnCount turnCount = new IntTurnCount(source);
             
