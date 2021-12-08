@@ -95,7 +95,8 @@ namespace TddLikeYouMeanIt
             TurnCount turnCount = new IntTurnCount(source);
             IRule multipleOfThreeRule = new MultipleOfThreeRule();
             IRule multipleOfFiveRule = new MultipleOfFiveRule();
-            if (turnCount.IsMultipleOf(3 * 5)) return new FizzBuzzAnswer();
+            IRule multipleOfThreeAndFiveRule = new MultipleOfThreeAndFiveRule();
+            if (multipleOfThreeAndFiveRule.Matches(turnCount)) return new FizzBuzzAnswer();
             if (multipleOfFiveRule.Matches(turnCount)) return new BuzzAnswer();
             if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
             return new InputAsStringAnswer(source);
