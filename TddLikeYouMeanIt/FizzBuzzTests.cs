@@ -9,12 +9,20 @@ namespace TddLikeYouMeanIt
 {
     public class FizzBuzz
     {
-        public Answer Transform(TurnCount source)
-        {
-            return new MultipleOfThreeAndFive_RuleEvalAction(
+        private readonly IRuleEvalAction _action;
+
+        public FizzBuzz():this(
+            new MultipleOfThreeAndFive_RuleEvalAction(
                 new MultipleOfFive_RuleEvalAction(
                     new MultipleOfThree_RuleEvalAction(
-                        new Default_RuleEvalAction()))).Act(source);
+                        new Default_RuleEvalAction())))
+            ){}
+
+        private FizzBuzz(IRuleEvalAction action) => _action = action;
+
+        public Answer Transform(TurnCount source)
+        {
+            return _action.Act(source);
         }
     }
 
