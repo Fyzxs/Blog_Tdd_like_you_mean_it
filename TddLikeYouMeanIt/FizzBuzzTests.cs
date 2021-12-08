@@ -93,7 +93,7 @@ namespace TddLikeYouMeanIt
         public Answer Transform(int source)
         {
             TurnCount turnCount = new IntTurnCount(source);
-            Rule multipleOfThreeRule = new MultipleOfThreeRule();
+            IRule multipleOfThreeRule = new MultipleOfThreeRule();
             if (turnCount.IsMultipleOf(3 * 5)) return new FizzBuzzAnswer();
             if (turnCount.IsMultipleOf(5)) return new BuzzAnswer();
             if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();

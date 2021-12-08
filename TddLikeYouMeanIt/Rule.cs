@@ -1,17 +1,17 @@
 namespace TddLikeYouMeanIt
 {
-    public abstract class Rule
+    public interface IRule
     {
-        public abstract bool Matches(TurnCount turnCount);
+        bool Matches(TurnCount turnCount);
     }
 
-    public abstract class MultipleOfRule : Rule
+    public abstract class MultipleOfRule : IRule
     {
         private readonly int _multipleOf;
 
         protected MultipleOfRule(int multipleOf) => _multipleOf = multipleOf;
 
-        public override bool Matches(TurnCount turnCount) => turnCount % _multipleOf == 0;
+        public bool Matches(TurnCount turnCount) => turnCount % _multipleOf == 0;
     }
 
     public sealed class MultipleOfThreeRule : MultipleOfRule
