@@ -94,15 +94,8 @@ namespace TddLikeYouMeanIt
         {
             if (0 == source % (3 * 5)) return new FizzBuzzAnswer();
             if (0 == source % 5) return "Buzz";
-            if (0 == source % 3) return "Fizz";
+            if (0 == source % 3) return new FizzAnswer();
             return source.ToString();
         }
-    }
-
-    public abstract class Answer : ToSystemType<string>{}
-
-    public sealed class FizzBuzzAnswer : Answer
-    {
-        protected override string AsSystemType() => "FizzBuzz";
     }
 }
