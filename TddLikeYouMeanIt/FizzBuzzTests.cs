@@ -99,5 +99,10 @@ namespace TddLikeYouMeanIt
         }
     }
 
-    public abstract class Answer : ToSystemType<string>
+    public abstract class Answer : ToSystemType<string>{}
+
+    public sealed class FizzBuzzAnswer : Answer
+    {
+        protected override string AsSystemType() => "FizzBuzz";
+    }
 }
