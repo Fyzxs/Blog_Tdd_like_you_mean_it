@@ -17,11 +17,11 @@ namespace TddLikeYouMeanIt.lib
         protected override string AsSystemType() => "Buzz";
     }
 
-    public sealed class InputAsStringAnswer : Answer
+    public sealed class TurnCountAsStringAnswer : Answer
     {
         private readonly TurnCount _input;
 
-        public InputAsStringAnswer(TurnCount input) => _input = input;
+        public TurnCountAsStringAnswer(TurnCount input) => _input = input;
 
         protected override string AsSystemType() => ((int)_input).ToString();
     }

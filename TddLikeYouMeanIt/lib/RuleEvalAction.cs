@@ -9,7 +9,7 @@ namespace TddLikeYouMeanIt.lib
     {
         public Answer Act(TurnCount turnCount)
         {
-            return new InputAsStringAnswer(turnCount);
+            return new TurnCountAsStringAnswer(turnCount);
         }
     }
 
