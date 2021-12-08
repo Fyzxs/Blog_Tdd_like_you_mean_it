@@ -18,4 +18,9 @@ namespace TddLikeYouMeanIt
     {
         public MultipleOfThreeRule() : base(3) { }
     }
+
+    public sealed class MultipleOfFiveRule : MultipleOfRule
+    {
+        public MultipleOfFiveRule() : base(5) { }
+    }
 }
