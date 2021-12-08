@@ -27,18 +27,19 @@ namespace TddLikeYouMeanIt
         public MultipleOfFiveRule() : base(5) { }
     }
 
-    public sealed class MultipleOfThreeAndFiveRule : IRule
+    public abstract class CompoundRule : IRule
     {
         private readonly IRule[] _rules;
 
+        protected CompoundRule(params IRule[] rules) => _rules = rules;
+
+        public bool Matches(TurnCount turnCount) => _rules.All(it => it.Matches(turnCount));
+    }
+
+    public sealed class MultipleOfThreeAndFiveRule : CompoundRule
+    {
         public MultipleOfThreeAndFiveRule()
-            :this(new MultipleOfThreeRule(), new MultipleOfFiveRule()){}
+            : base(new MultipleOfThreeRule(), new MultipleOfFiveRule()) { }
 
-        private MultipleOfThreeAndFiveRule(params IRule[] rules) => _rules = rules;
-
-        public bool Matches(TurnCount turnCount)
-        {
-            return _rules.All(it => it.Matches(turnCount));
-        }
     }
 }
