@@ -5,7 +5,7 @@ namespace TddLikeYouMeanIt.lib
         Answer Turn(TurnCount source);
     }
 
-    public class FizzBuzz : IFizzBuzz
+    public sealed class FizzBuzz : IFizzBuzz
     {
         private readonly IRuleEvalAction _action;
 
