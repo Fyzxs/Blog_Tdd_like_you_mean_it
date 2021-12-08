@@ -95,7 +95,7 @@ namespace TddLikeYouMeanIt
             if (0 == source % (3 * 5)) return new FizzBuzzAnswer();
             if (0 == source % 5) return new BuzzAnswer();
             if (0 == source % 3) return new FizzAnswer();
-            return source.ToString();
+            return new InputAsStringAnswer(source);
         }
     }
 }
