@@ -23,8 +23,9 @@ namespace TddLikeYouMeanIt
                 { 4, "4" }
             };
 
-            (int sourceInput, string expected) =
-                regressionValues.ElementAt(Rand.Next(0, regressionValues.Count));
+            KeyValuePair<int, string> keyValuePair = regressionValues.ElementAt(Rand.Next(0, regressionValues.Count));
+            TurnCount sourceInput = new IntTurnCount(keyValuePair.Key);
+            string expected = keyValuePair.Value;
 
             //ACT
             string actual = Transform(sourceInput);
@@ -43,7 +44,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            int sourceInput = multiplier * multiplicand;
+            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
 
             //ACT
             string actual = Transform(sourceInput);
@@ -81,7 +82,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            int sourceInput = multiplier * multiplicand;
+            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
 
             //ACT
             string actual = Transform(sourceInput);
