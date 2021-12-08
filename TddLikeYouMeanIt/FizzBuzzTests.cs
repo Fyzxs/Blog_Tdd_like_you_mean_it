@@ -90,7 +90,7 @@ namespace TddLikeYouMeanIt
             actual.Should().Be(expected);
         }
 
-        public string Transform(int source)
+        public Answer Transform(int source)
         {
             if (0 == source % (3 * 5)) return new FizzBuzzAnswer();
             if (0 == source % 5) return new BuzzAnswer();
