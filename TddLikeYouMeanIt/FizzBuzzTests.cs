@@ -93,9 +93,9 @@ namespace TddLikeYouMeanIt
         public Answer Transform(int source)
         {
             TurnCount turnCount = new IntTurnCount(source);
-            if (0 == turnCount % (3 * 5)) return new FizzBuzzAnswer();
-            if (0 == turnCount % 5) return new BuzzAnswer();
-            if (0 == turnCount % 3) return new FizzAnswer();
+            if (turnCount.IsMultipleOf(3 * 5)) return new FizzBuzzAnswer();
+            if (turnCount.IsMultipleOf(5)) return new BuzzAnswer();
+            if (turnCount.IsMultipleOf(3)) return new FizzAnswer();
             return new InputAsStringAnswer(source);
         }
     }
