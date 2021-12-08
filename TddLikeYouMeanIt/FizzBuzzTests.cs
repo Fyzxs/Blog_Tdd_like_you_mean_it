@@ -92,7 +92,7 @@ namespace TddLikeYouMeanIt
 
         public string Transform(int source)
         {
-            if (0 == source % (3 * 5)) return "FizzBuzz";
+            if (0 == source % (3 * 5)) return new FizzBuzzAnswer();
             if (0 == source % 5) return "Buzz";
             if (0 == source % 3) return "Fizz";
             return source.ToString();
