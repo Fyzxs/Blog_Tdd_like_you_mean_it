@@ -93,12 +93,16 @@ namespace TddLikeYouMeanIt
         public Answer Transform(int source)
         {
             TurnCount turnCount = new IntTurnCount(source);
-            IRule multipleOfThreeRule = new MultipleOfThreeRule();
-            IRule multipleOfFiveRule = new MultipleOfFiveRule();
+
             IRule multipleOfThreeAndFiveRule = new MultipleOfThreeAndFiveRule();
             if (multipleOfThreeAndFiveRule.Matches(turnCount)) return new FizzBuzzAnswer();
+            
+            IRule multipleOfFiveRule = new MultipleOfFiveRule();
             if (multipleOfFiveRule.Matches(turnCount)) return new BuzzAnswer();
+            
+            IRule multipleOfThreeRule = new MultipleOfThreeRule();
             if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
+           
             return new InputAsStringAnswer(source);
         }
     }
