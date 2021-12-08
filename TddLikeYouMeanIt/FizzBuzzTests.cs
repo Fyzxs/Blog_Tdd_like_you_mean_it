@@ -103,7 +103,7 @@ namespace TddLikeYouMeanIt
             IRule multipleOfThreeRule = new MultipleOfThreeRule();
             if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
            
-            return new InputAsStringAnswer(source);
+            return new InputAsStringAnswer(turnCount);
         }
     }
 }
