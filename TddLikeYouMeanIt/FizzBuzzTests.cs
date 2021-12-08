@@ -92,9 +92,10 @@ namespace TddLikeYouMeanIt
 
         public Answer Transform(int source)
         {
-            if (0 == source % (3 * 5)) return new FizzBuzzAnswer();
-            if (0 == source % 5) return new BuzzAnswer();
-            if (0 == source % 3) return new FizzAnswer();
+            TurnCount turnCount = new IntTurnCount(source);
+            if (0 == turnCount % (3 * 5)) return new FizzBuzzAnswer();
+            if (0 == turnCount % 5) return new BuzzAnswer();
+            if (0 == turnCount % 3) return new FizzAnswer();
             return new InputAsStringAnswer(source);
         }
     }
