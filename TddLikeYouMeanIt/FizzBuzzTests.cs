@@ -101,11 +101,6 @@ namespace TddLikeYouMeanIt
             if (multipleOfFiveRule.Matches(turnCount)) return new BuzzAnswer();
             
             return new MultipleOfThree_RuleEvalAction(new Default_RuleEvalAction()).Act(turnCount);
-
-            IRule multipleOfThreeRule = new MultipleOfThreeRule();
-            if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
-            
-            return new Default_RuleEvalAction().Act(turnCount);
         }
     }
 }
