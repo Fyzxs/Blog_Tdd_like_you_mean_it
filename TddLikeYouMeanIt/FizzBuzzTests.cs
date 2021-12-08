@@ -102,20 +102,20 @@ namespace TddLikeYouMeanIt
             
             IRule multipleOfThreeRule = new MultipleOfThreeRule();
             if (multipleOfThreeRule.Matches(turnCount)) return new FizzAnswer();
-           
-            return new InputAsStringAnswer(turnCount);
-        }
-    }
-    public interface IRuleEvalAction
-    {
-        public Answer Act(TurnCount turnCount);
-    }
 
-    public sealed class Default_RuleEvalAction : IRuleEvalAction
-    {
-        public Answer Act(TurnCount turnCount)
+            return new Default_RuleEvalAction().Act(turnCount);
+        }
+        public interface IRuleEvalAction
         {
-            return new InputAsStringAnswer(turnCount);
+            public Answer Act(TurnCount turnCount);
+        }
+
+        public sealed class Default_RuleEvalAction : IRuleEvalAction
+        {
+            public Answer Act(TurnCount turnCount)
+            {
+                return new InputAsStringAnswer(turnCount);
+            }
         }
     }
 }
