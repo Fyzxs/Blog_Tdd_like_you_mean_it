@@ -37,4 +37,27 @@ namespace TddLikeYouMeanIt
 
         private bool ShouldHandle(TurnCount turnCount) => _rule.Matches(turnCount);
     }
+
+    public sealed class MultipleOfFive_RuleEvalAction : IRuleEvalAction
+    {
+        private readonly IRule _rule;
+        private readonly IRuleEvalAction _nextAction;
+
+        public MultipleOfFive_RuleEvalAction(IRuleEvalAction nextAction) : this(new MultipleOfFiveRule(), nextAction) { }
+
+        private MultipleOfFive_RuleEvalAction(IRule rule, IRuleEvalAction nextAction)
+        {
+            _rule = rule;
+            _nextAction = nextAction;
+        }
+
+        public Answer Act(TurnCount turnCount)
+        {
+            if (ShouldHandle(turnCount)) return new BuzzAnswer();
+
+            return _nextAction.Act(turnCount);
+        }
+
+        private bool ShouldHandle(TurnCount turnCount) => _rule.Matches(turnCount);
+    }
 }
