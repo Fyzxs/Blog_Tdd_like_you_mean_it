@@ -46,12 +46,10 @@ namespace TddLikeYouMeanIt
     public sealed class MultipleOfFive_RuleEvalAction : Base_RuleEvalAction
     {
         public MultipleOfFive_RuleEvalAction(IRuleEvalAction nextAction) : base(new MultipleOfFiveRule(), new BuzzAnswer(), nextAction) { }
-
     }
 
     public sealed class MultipleOfThreeAndFive_RuleEvalAction : Base_RuleEvalAction
     {
         public MultipleOfThreeAndFive_RuleEvalAction(IRuleEvalAction nextAction) : base(new MultipleOfThreeAndFiveRule(), new FizzBuzzAnswer(), nextAction) { }
-
     }
 }
