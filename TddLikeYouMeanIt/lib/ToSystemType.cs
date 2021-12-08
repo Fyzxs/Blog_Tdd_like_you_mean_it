@@ -27,6 +27,6 @@ namespace TddLikeYouMeanIt.lib
         /// Retrieves the value of the type from the concrete class explicitly.
         /// </summary>
         /// <returns>The converted value of the implementing type.</returns>
-        public abstract T AsSystemType();
+        protected abstract T AsSystemType();
     }
 }
