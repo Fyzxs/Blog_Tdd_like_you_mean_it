@@ -1,3 +1,6 @@
+using System.Data;
+using System.Linq;
+
 namespace TddLikeYouMeanIt
 {
     public interface IRule
@@ -22,5 +25,20 @@ namespace TddLikeYouMeanIt
     public sealed class MultipleOfFiveRule : MultipleOfRule
     {
         public MultipleOfFiveRule() : base(5) { }
+    }
+
+    public sealed class MultipleOfThreeAndFiveRule : IRule
+    {
+        private readonly IRule[] _rules;
+
+        public MultipleOfThreeAndFiveRule()
+            :this(new MultipleOfThreeRule(), new MultipleOfFiveRule()){}
+
+        private MultipleOfThreeAndFiveRule(params IRule[] rules) => _rules = rules;
+
+        public bool Matches(TurnCount turnCount)
+        {
+            return _rules.All(it => it.Matches(turnCount));
+        }
     }
 }
