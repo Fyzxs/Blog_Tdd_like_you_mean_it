@@ -38,26 +38,32 @@ namespace TddLikeYouMeanIt
         private bool ShouldHandle(TurnCount turnCount) => _rule.Matches(turnCount);
     }
 
-    public sealed class MultipleOfFive_RuleEvalAction : IRuleEvalAction
+    public abstract class Base_RuleEvalAction : IRuleEvalAction
     {
         private readonly IRule _rule;
+        private readonly Answer _answer;
         private readonly IRuleEvalAction _nextAction;
 
-        public MultipleOfFive_RuleEvalAction(IRuleEvalAction nextAction) : this(new MultipleOfFiveRule(), nextAction) { }
-
-        private MultipleOfFive_RuleEvalAction(IRule rule, IRuleEvalAction nextAction)
+        protected Base_RuleEvalAction(IRule rule, Answer answer, IRuleEvalAction nextAction)
         {
             _rule = rule;
+            _answer = answer;
             _nextAction = nextAction;
         }
 
         public Answer Act(TurnCount turnCount)
         {
-            if (ShouldHandle(turnCount)) return new BuzzAnswer();
+            if (ShouldHandle(turnCount)) return _answer;
 
             return _nextAction.Act(turnCount);
         }
 
         private bool ShouldHandle(TurnCount turnCount) => _rule.Matches(turnCount);
+    }
+
+    public sealed class MultipleOfFive_RuleEvalAction : Base_RuleEvalAction
+    {
+        public MultipleOfFive_RuleEvalAction(IRuleEvalAction nextAction) : base(new MultipleOfFiveRule(), new BuzzAnswer(), nextAction) { }
+
     }
 }
