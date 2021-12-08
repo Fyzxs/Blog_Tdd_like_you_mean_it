@@ -11,4 +11,9 @@ namespace TddLikeYouMeanIt.lib
     {
         protected override string AsSystemType() => "Fizz";
     }
+
+    public sealed class BuzzAnswer : Answer
+    {
+        protected override string AsSystemType() => "Buzz";
+    }
 }
