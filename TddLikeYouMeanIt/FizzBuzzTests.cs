@@ -81,7 +81,6 @@ namespace TddLikeYouMeanIt
 
             //ACT
             string actual = subject.Transform(sourceInput);
-
             //ASSERT
             actual.Should().Be(expected);
         }
