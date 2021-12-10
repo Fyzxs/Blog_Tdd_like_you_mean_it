@@ -3,13 +3,20 @@ using System.Linq;
 
 namespace TddLikeYouMeanIt.lib
 {
-    public abstract class Rule
+    public abstract class Rule : IComparable<Rule>
     {
         private readonly int _factors;
 
         protected Rule(int factors) => _factors = factors;
 
         public abstract bool Matches(TurnInput turnInput);
+
+        public int CompareTo(Rule? other)
+        {
+            if (ReferenceEquals(this, other)) return 0;
+            if (ReferenceEquals(null, other)) return 1;
+            return _factors.CompareTo(other._factors);
+        }
     }
 
     public abstract class MultipleOfRule : Rule
