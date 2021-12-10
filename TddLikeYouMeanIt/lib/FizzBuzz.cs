@@ -1,11 +1,6 @@
 namespace TddLikeYouMeanIt.lib
 {
-    public interface IFizzBuzz
-    {
-        Answer Turn(TurnCount source);
-    }
-
-    public sealed class FizzBuzz : IFizzBuzz
+    public sealed class FizzBuzz : IRuleEvalAction
     {
         private readonly IRuleEvalAction _action;
 
@@ -19,6 +14,6 @@ namespace TddLikeYouMeanIt.lib
 
         private FizzBuzz(IRuleEvalAction action) => _action = action;
 
-        public Answer Turn(TurnCount source) => _action.Act(source);
+        public Answer Act(TurnCount source) => _action.Act(source);
     }
 }

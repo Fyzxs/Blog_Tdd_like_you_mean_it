@@ -26,10 +26,10 @@ namespace TddLikeYouMeanIt
             KeyValuePair<int, string> keyValuePair = regressionValues.ElementAt(Rand.Next(0, regressionValues.Count));
             TurnCount sourceInput = new IntTurnCount(keyValuePair.Key);
             string expected = keyValuePair.Value;
-            IFizzBuzz subject = new FizzBuzz();
+            IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Turn(sourceInput);
+            string actual = subject.Act(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -46,10 +46,10 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
-            IFizzBuzz subject = new FizzBuzz();
+            IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Turn(sourceInput);
+            string actual = subject.Act(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
@@ -66,10 +66,10 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
-            IFizzBuzz subject = new FizzBuzz();
+            IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Turn(sourceInput);
+            string actual = subject.Act(sourceInput);
             //ASSERT
             actual.Should().Be(expected);
         }
@@ -85,10 +85,10 @@ namespace TddLikeYouMeanIt
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
             TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
-            IFizzBuzz subject = new FizzBuzz();
+            IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
-            string actual = subject.Turn(sourceInput);
+            string actual = subject.Act(sourceInput);
 
             //ASSERT
             actual.Should().Be(expected);
