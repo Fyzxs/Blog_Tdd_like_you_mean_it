@@ -1,9 +1,14 @@
+using System;
 using System.Linq;
 
 namespace TddLikeYouMeanIt.lib
 {
     public abstract class Rule
     {
+        private readonly int _factors;
+
+        protected Rule(int factors) => _factors = factors;
+
         public abstract bool Matches(TurnInput turnInput);
     }
 
@@ -11,7 +16,7 @@ namespace TddLikeYouMeanIt.lib
     {
         private readonly int _multipleOf;
 
-        protected MultipleOfRule(int multipleOf) => _multipleOf = multipleOf;
+        protected MultipleOfRule(int multipleOf) : base(1) => _multipleOf = multipleOf;
 
         public override bool Matches(TurnInput turnInput) => turnInput % _multipleOf == 0;
     }
@@ -29,8 +34,7 @@ namespace TddLikeYouMeanIt.lib
     public abstract class CompoundRule : Rule
     {
         private readonly Rule[] _rules;
-
-        protected CompoundRule(params Rule[] rules) => _rules = rules;
+        protected CompoundRule(params Rule[] rules) : base(rules.Length) => _rules = rules;
 
         public override bool Matches(TurnInput turnInput) => _rules.All(it => it.Matches(turnInput));
     }
