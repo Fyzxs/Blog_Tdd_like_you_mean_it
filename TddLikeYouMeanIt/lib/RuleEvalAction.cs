@@ -12,11 +12,11 @@ namespace TddLikeYouMeanIt.lib
 
     public abstract class Base_RuleEvalAction : IRuleEvalAction
     {
-        private readonly IRule _rule;
+        private readonly Rule _rule;
         private readonly Answer _answer;
         private readonly IRuleEvalAction _nextAction;
 
-        protected Base_RuleEvalAction(IRule rule, Answer answer, IRuleEvalAction nextAction)
+        protected Base_RuleEvalAction(Rule rule, Answer answer, IRuleEvalAction nextAction)
         {
             _rule = rule;
             _answer = answer;

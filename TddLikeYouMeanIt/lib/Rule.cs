@@ -2,18 +2,18 @@ using System.Linq;
 
 namespace TddLikeYouMeanIt.lib
 {
-    public interface IRule
+    public abstract class Rule
     {
-        bool Matches(TurnInput turnInput);
+        public abstract bool Matches(TurnInput turnInput);
     }
 
-    public abstract class MultipleOfRule : IRule
+    public abstract class MultipleOfRule : Rule
     {
         private readonly int _multipleOf;
 
         protected MultipleOfRule(int multipleOf) => _multipleOf = multipleOf;
 
-        public bool Matches(TurnInput turnInput) => turnInput % _multipleOf == 0;
+        public override bool Matches(TurnInput turnInput) => turnInput % _multipleOf == 0;
     }
 
     public sealed class MultipleOfThreeRule : MultipleOfRule
@@ -26,13 +26,13 @@ namespace TddLikeYouMeanIt.lib
         public MultipleOfFiveRule() : base(5) { }
     }
 
-    public abstract class CompoundRule : IRule
+    public abstract class CompoundRule : Rule
     {
-        private readonly IRule[] _rules;
+        private readonly Rule[] _rules;
 
-        protected CompoundRule(params IRule[] rules) => _rules = rules;
+        protected CompoundRule(params Rule[] rules) => _rules = rules;
 
-        public bool Matches(TurnInput turnInput) => _rules.All(it => it.Matches(turnInput));
+        public override bool Matches(TurnInput turnInput) => _rules.All(it => it.Matches(turnInput));
     }
 
     public sealed class MultipleOfThreeAndFiveRule : CompoundRule
