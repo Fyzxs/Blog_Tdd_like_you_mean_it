@@ -19,9 +19,9 @@ namespace TddLikeYouMeanIt.lib
 
     public sealed class TurnCountAsStringAnswer : Answer
     {
-        private readonly TurnCount _input;
+        private readonly TurnInput _input;
 
-        public TurnCountAsStringAnswer(TurnCount input) => _input = input;
+        public TurnCountAsStringAnswer(TurnInput input) => _input = input;
 
         protected override string AsSystemType() => ((int)_input).ToString();
     }

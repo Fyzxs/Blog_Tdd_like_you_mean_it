@@ -4,7 +4,7 @@ namespace TddLikeYouMeanIt.lib
 {
     public interface IRule
     {
-        bool Matches(TurnCount turnCount);
+        bool Matches(TurnInput turnInput);
     }
 
     public abstract class MultipleOfRule : IRule
@@ -13,7 +13,7 @@ namespace TddLikeYouMeanIt.lib
 
         protected MultipleOfRule(int multipleOf) => _multipleOf = multipleOf;
 
-        public bool Matches(TurnCount turnCount) => turnCount % _multipleOf == 0;
+        public bool Matches(TurnInput turnInput) => turnInput % _multipleOf == 0;
     }
 
     public sealed class MultipleOfThreeRule : MultipleOfRule
@@ -32,7 +32,7 @@ namespace TddLikeYouMeanIt.lib
 
         protected CompoundRule(params IRule[] rules) => _rules = rules;
 
-        public bool Matches(TurnCount turnCount) => _rules.All(it => it.Matches(turnCount));
+        public bool Matches(TurnInput turnInput) => _rules.All(it => it.Matches(turnInput));
     }
 
     public sealed class MultipleOfThreeAndFiveRule : CompoundRule

@@ -14,6 +14,6 @@ namespace TddLikeYouMeanIt.lib
 
         private FizzBuzz(IRuleEvalAction action) => _action = action;
 
-        public Answer Act(TurnCount source) => _action.Act(source);
+        public Answer Act(TurnInput source) => _action.Act(source);
     }
 }

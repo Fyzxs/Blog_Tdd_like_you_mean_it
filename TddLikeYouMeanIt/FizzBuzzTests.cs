@@ -24,7 +24,7 @@ namespace TddLikeYouMeanIt
             };
 
             KeyValuePair<int, string> keyValuePair = regressionValues.ElementAt(Rand.Next(0, regressionValues.Count));
-            TurnCount sourceInput = new IntTurnCount(keyValuePair.Key);
+            TurnInput sourceInput = new IntTurnInput(keyValuePair.Key);
             string expected = keyValuePair.Value;
             IRuleEvalAction subject = new FizzBuzz();
 
@@ -45,7 +45,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            TurnInput sourceInput = new IntTurnInput(multiplier * multiplicand);
             IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
@@ -65,7 +65,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            TurnInput sourceInput = new IntTurnInput(multiplier * multiplicand);
             IRuleEvalAction subject = new FizzBuzz();
 
             //ACT
@@ -84,7 +84,7 @@ namespace TddLikeYouMeanIt
 
             int randomIndex = Rand.Next(multiplierList.Count);
             int multiplier = multiplierList.ElementAt(randomIndex);
-            TurnCount sourceInput = new IntTurnCount(multiplier * multiplicand);
+            TurnInput sourceInput = new IntTurnInput(multiplier * multiplicand);
             IRuleEvalAction subject = new FizzBuzz();
 
             //ACT

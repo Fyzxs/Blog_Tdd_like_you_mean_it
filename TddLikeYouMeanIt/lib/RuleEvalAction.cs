@@ -2,15 +2,12 @@ namespace TddLikeYouMeanIt.lib
 {
     public interface IRuleEvalAction
     {
-        public Answer Act(TurnCount turnCount);
+        public Answer Act(TurnInput turnInput);
     }
 
     public sealed class AsString_RuleEvalAction : IRuleEvalAction
     {
-        public Answer Act(TurnCount turnCount)
-        {
-            return new TurnCountAsStringAnswer(turnCount);
-        }
+        public Answer Act(TurnInput turnInput) => new TurnCountAsStringAnswer(turnInput);
     }
 
     public abstract class Base_RuleEvalAction : IRuleEvalAction
@@ -26,14 +23,14 @@ namespace TddLikeYouMeanIt.lib
             _nextAction = nextAction;
         }
 
-        public Answer Act(TurnCount turnCount)
+        public Answer Act(TurnInput turnInput)
         {
-            if (ShouldHandle(turnCount)) return _answer;
+            if (ShouldHandle(turnInput)) return _answer;
 
-            return _nextAction.Act(turnCount);
+            return _nextAction.Act(turnInput);
         }
 
-        private bool ShouldHandle(TurnCount turnCount) => _rule.Matches(turnCount);
+        private bool ShouldHandle(TurnInput turnInput) => _rule.Matches(turnInput);
     }
 
     public sealed class MultipleOfThree_RuleEvalAction : Base_RuleEvalAction
